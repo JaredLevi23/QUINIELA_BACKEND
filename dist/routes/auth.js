@@ -12,4 +12,3 @@ router.post('/', [
 ], auth_1.userAuthentication);
 router.get('/check-auth-status', auth_1.checkAuthStatus);
 exports.default = router;
-//# sourceMappingURL=auth.js.map

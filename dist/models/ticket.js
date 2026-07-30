@@ -11,7 +11,7 @@
  * folio - optional
  * predictions: Prediction[
  * {
- * matchUid
+ * matchId
  * result
  * registerDate
  * updateDate
@@ -86,4 +86,3 @@ TicketSchema.methods.toJSON = function () {
 };
 const Ticket = (0, mongoose_1.model)('Ticket', TicketSchema);
 exports.default = Ticket;
-//# sourceMappingURL=ticket.js.map

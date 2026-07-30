@@ -136,4 +136,3 @@ const deleteMatch = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     });
 });
 exports.deleteMatch = deleteMatch;
-//# sourceMappingURL=match.js.map

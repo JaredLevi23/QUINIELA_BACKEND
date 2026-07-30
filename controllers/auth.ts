@@ -24,7 +24,7 @@ export const userAuthentication = async ( req: Request, res: Response ) => {
             });
         }
 
-        const validatePassword = bcryptjs.compareSync( password, userLogin.password );    
+        const validatePassword = bcryptjs.compareSync( password as string, userLogin.password as string );
 
         if( !validatePassword ){
             return res.status( 400 ).json({

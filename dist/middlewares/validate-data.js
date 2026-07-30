@@ -22,4 +22,3 @@ const findCategory = (id) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.findCategory = findCategory;
-//# sourceMappingURL=validate-data.js.map

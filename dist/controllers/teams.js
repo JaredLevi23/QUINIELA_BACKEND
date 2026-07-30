@@ -113,4 +113,3 @@ const deleteTeam = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     });
 });
 exports.deleteTeam = deleteTeam;
-//# sourceMappingURL=teams.js.map

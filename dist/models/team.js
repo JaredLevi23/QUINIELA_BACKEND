@@ -56,9 +56,7 @@ TeamSchema.methods.toJSON = function () {
     return team;
 };
 // Índices para búsquedas optimizadas
-TeamSchema.index({ name: 1 });
 TeamSchema.index({ country: 1 });
 TeamSchema.index({ enabled: 1 });
 const Team = (0, mongoose_1.model)('Team', TeamSchema);
 exports.default = Team;
-//# sourceMappingURL=team.js.map

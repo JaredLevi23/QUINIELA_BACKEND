@@ -34,4 +34,3 @@ CategoriesSchema.methods.toJSON = function () {
 };
 const Categories = (0, mongoose_1.model)('Categories', CategoriesSchema);
 exports.default = Categories;
-//# sourceMappingURL=categories.js.map

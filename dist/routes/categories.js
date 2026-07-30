@@ -32,4 +32,3 @@ router.delete('/:id', [
     validate_fields_1.validation
 ], categories_1.deleteCategory);
 exports.default = router;
-//# sourceMappingURL=categories.js.map

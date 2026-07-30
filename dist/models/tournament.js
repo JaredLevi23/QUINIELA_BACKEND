@@ -48,4 +48,3 @@ TournamentSchema.methods.toJSON = function () {
 };
 const Tournament = (0, mongoose_1.model)('Tournament', TournamentSchema);
 exports.default = Tournament;
-//# sourceMappingURL=tournament.js.map

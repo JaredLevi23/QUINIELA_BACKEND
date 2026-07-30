@@ -32,4 +32,3 @@ router.delete('/:id', [
     validate_fields_1.validation
 ], teams_1.deleteTeam);
 exports.default = router;
-//# sourceMappingURL=teams.js.map

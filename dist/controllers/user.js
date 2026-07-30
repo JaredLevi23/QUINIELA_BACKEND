@@ -8,37 +8,44 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteUsuario = exports.putUsuario = exports.postUsuario = exports.getUsuario = exports.getUsuarios = void 0;
+exports.deleteUsuario = exports.enableUsuario = exports.patchUserRole = exports.putUsuario = exports.postUsuario = exports.getUsuario = exports.getUsuarios = void 0;
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const users_1 = __importDefault(require("../models/users"));
-const getUsuarios = (req, res) => {
+const getUsuarios = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const page = Math.max(Number(req.query.page) || 1, 1);
+    const limit = Math.min(Math.max(Number(req.query.limit) || 10, 1), 100);
+    const [users, total] = yield Promise.all([
+        users_1.default.find()
+            .skip((page - 1) * limit)
+            .limit(limit),
+        users_1.default.countDocuments()
+    ]);
     res.status(200).json({
-        msg: 'getUsuarios'
+        msg: 'getUsuarios',
+        total,
+        page,
+        limit,
+        users
     });
-};
+});
 exports.getUsuarios = getUsuarios;
-const getUsuario = (req, res) => {
+const getUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
+    const user = yield users_1.default.findById(id);
+    if (!user) {
+        return res.status(404).json({
+            msg: 'El usuario no existe'
+        });
+    }
     res.status(200).json({
         msg: 'getUsuario',
-        id
+        user
     });
-};
+});
 exports.getUsuario = getUsuario;
 const postUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, lastname, email, password } = req.body;
@@ -66,8 +73,8 @@ const postUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.postUsuario = postUsuario;
 const putUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
-    const _a = req.body, { google } = _a, data = __rest(_a, ["google"]);
-    const user = yield users_1.default.findByIdAndUpdate(id, data, { new: true });
+    const { name, lastname, email, enabled } = req.body;
+    const user = yield users_1.default.findByIdAndUpdate(id, { name, lastname, email, enabled }, { new: true });
     if (!user) {
         return res.status(406).json({
             msg: 'El usuario no existe'
@@ -79,6 +86,35 @@ const putUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     });
 });
 exports.putUsuario = putUsuario;
+const patchUserRole = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    const { role } = req.body;
+    const user = yield users_1.default.findByIdAndUpdate(id, { role }, { new: true });
+    if (!user) {
+        return res.status(406).json({
+            msg: 'El usuario no existe'
+        });
+    }
+    res.status(200).json({
+        msg: 'Rol actualizado',
+        user
+    });
+});
+exports.patchUserRole = patchUserRole;
+const enableUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    const user = yield users_1.default.findByIdAndUpdate(id, { enabled: true }, { new: true });
+    if (!user) {
+        return res.status(406).json({
+            msg: 'El usuario no existe'
+        });
+    }
+    res.status(200).json({
+        msg: 'Usuario reactivado',
+        user
+    });
+});
+exports.enableUsuario = enableUsuario;
 const deleteUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
     const user = yield users_1.default.findByIdAndUpdate(id, { enabled: false }, { new: true });
@@ -93,4 +129,3 @@ const deleteUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     });
 });
 exports.deleteUsuario = deleteUsuario;
-//# sourceMappingURL=user.js.map

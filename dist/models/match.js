@@ -65,4 +65,3 @@ MatchSchema.methods.toJSON = function () {
 };
 const Match = (0, mongoose_1.model)('Match', MatchSchema);
 exports.default = Match;
-//# sourceMappingURL=match.js.map

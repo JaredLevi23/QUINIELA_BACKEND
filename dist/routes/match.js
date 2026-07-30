@@ -35,4 +35,3 @@ router.delete('/:id', [
     validate_fields_1.validation
 ], match_1.deleteMatch);
 exports.default = router;
-//# sourceMappingURL=match.js.map

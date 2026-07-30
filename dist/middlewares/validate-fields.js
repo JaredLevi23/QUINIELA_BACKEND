@@ -12,4 +12,3 @@ const validation = (req, res, next) => {
     next();
 };
 exports.validation = validation;
-//# sourceMappingURL=validate-fields.js.map

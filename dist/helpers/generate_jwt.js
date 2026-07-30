@@ -28,4 +28,3 @@ const generateJWT = (uid) => __awaiter(void 0, void 0, void 0, function* () {
     });
 });
 exports.default = generateJWT;
-//# sourceMappingURL=generate_jwt.js.map

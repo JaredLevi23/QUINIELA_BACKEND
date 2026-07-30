@@ -100,4 +100,3 @@ const deleteTournament = (req, res) => __awaiter(void 0, void 0, void 0, functio
     });
 });
 exports.deleteTournament = deleteTournament;
-//# sourceMappingURL=tournament.js.map

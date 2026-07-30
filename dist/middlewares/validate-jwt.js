@@ -39,6 +39,7 @@ const validarJWT = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
         }
         console.log('Validnado JWT');
         req.uid = uid;
+        req.role = userAuth.role;
         next();
     }
     catch (error) {
@@ -48,4 +49,3 @@ const validarJWT = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
 });
 exports.validarJWT = validarJWT;
-//# sourceMappingURL=validate-jwt.js.map

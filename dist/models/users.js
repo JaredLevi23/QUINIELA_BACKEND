@@ -12,6 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
+const enums_1 = require("../helpers/enums");
 const UserSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -26,8 +27,9 @@ const UserSchema = new mongoose_1.Schema({
         required: [true, 'El correo electronico es obligatorio']
     },
     role: {
-        type: Number,
-        default: 0
+        type: String,
+        enum: Object.values(enums_1.UserRole),
+        default: enums_1.UserRole.USER
     },
     enabled: {
         type: Boolean,
@@ -49,4 +51,3 @@ UserSchema.methods.toJSON = function () {
 };
 const User = (0, mongoose_1.model)('User', UserSchema);
 exports.default = User;
-//# sourceMappingURL=users.js.map

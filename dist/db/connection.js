@@ -24,4 +24,3 @@ const db = () => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.default = db;
-//# sourceMappingURL=connection.js.map

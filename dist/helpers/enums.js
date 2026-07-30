@@ -8,17 +8,16 @@ var MatchStatus;
     MatchStatus["FINISHED"] = "finished";
     MatchStatus["POSTPONED"] = "postponed";
     MatchStatus["CANCELLED"] = "cancelled";
-})(MatchStatus = exports.MatchStatus || (exports.MatchStatus = {}));
+})(MatchStatus || (exports.MatchStatus = MatchStatus = {}));
 var PredictionResult;
 (function (PredictionResult) {
     PredictionResult["HOME"] = "home";
     PredictionResult["AWAY"] = "away";
     PredictionResult["DRAW"] = "draw";
-})(PredictionResult = exports.PredictionResult || (exports.PredictionResult = {}));
+})(PredictionResult || (exports.PredictionResult = PredictionResult = {}));
 var UserRole;
 (function (UserRole) {
     UserRole["USER"] = "user";
     UserRole["ADMIN"] = "admin";
     UserRole["MODERATOR"] = "moderator";
-})(UserRole = exports.UserRole || (exports.UserRole = {}));
-//# sourceMappingURL=enums.js.map
+})(UserRole || (exports.UserRole = UserRole = {}));

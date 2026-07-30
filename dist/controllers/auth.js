@@ -87,7 +87,8 @@ const checkAuthStatus = (req, res) => __awaiter(void 0, void 0, void 0, function
             });
         }
         return res.status(200).json({
-            token: token,
+            user: userAuth,
+            token
         });
     }
     catch (error) {
@@ -97,4 +98,3 @@ const checkAuthStatus = (req, res) => __awaiter(void 0, void 0, void 0, function
     }
 });
 exports.checkAuthStatus = checkAuthStatus;
-//# sourceMappingURL=auth.js.map

@@ -26,4 +26,3 @@ router.delete("/:id", [
     validate_fields_1.validation
 ], tournament_1.deleteTournament);
 exports.default = router;
-//# sourceMappingURL=tournament.js.map

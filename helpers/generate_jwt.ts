@@ -1,7 +1,7 @@
 
 import jwt from "jsonwebtoken";
 
-const generateJWT = async ( uid: '' ) => {
+const generateJWT = async ( uid: string ) => {
 
     return new Promise( ( resolve, reject ) => {
         const payload = { uid };
