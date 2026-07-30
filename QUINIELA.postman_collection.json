@@ -1,0 +1,2091 @@
+{
+  "info": {
+    "_postman_id": "71fa4413-6570-49bb-9bba-dde00566dd76",
+    "name": "QUINIELA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15453720"
+  },
+  "item": [
+    {
+      "name": "Torneo",
+      "item": [
+        {
+          "name": "Consulta",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/tournaments",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "tournaments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Consulta",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/tournaments",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "tournaments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1826"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"722-RYhDgsAPyMxcw9Wly/beZcRqTfs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:20:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"GetTournaments\",\n    \"tournaments\": [\n        {\n            \"name\": \"Torneo Apertura\",\n            \"startDate\": \"2024-06-01T00:00:00.000Z\",\n            \"endDate\": \"2024-07-01T00:00:00.000Z\",\n            \"createdAt\": \"2026-02-06T07:18:20.201Z\",\n            \"updatedAt\": \"2026-02-06T07:18:20.201Z\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\"\n        },\n        {\n            \"name\": \"Jornada 2026 Prueba\",\n            \"startDate\": \"2026-02-01T00:00:00.000Z\",\n            \"endDate\": \"2026-02-22T00:00:00.000Z\",\n            \"createdAt\": \"2026-02-11T08:05:55.283Z\",\n            \"updatedAt\": \"2026-02-11T08:05:55.283Z\",\n            \"tournamentId\": \"698c38633d247a5e89d6930e\"\n        },\n        {\n            \"name\": \"Jornada de Prueba\",\n            \"startDate\": \"2026-02-20T00:00:00.000Z\",\n            \"endDate\": \"2026-02-27T00:00:00.000Z\",\n            \"createdAt\": \"2026-02-12T05:01:19.261Z\",\n            \"updatedAt\": \"2026-02-12T05:01:19.261Z\",\n            \"tournamentId\": \"698d5e9ff6466ff601438f5b\"\n        },\n        {\n            \"name\": \"Torneo Apertura 2\",\n            \"startDate\": \"2024-06-01T00:00:00.000Z\",\n            \"endDate\": \"2024-07-01T00:00:00.000Z\",\n            \"createdAt\": \"2026-03-07T07:44:23.994Z\",\n            \"updatedAt\": \"2026-03-07T07:44:23.994Z\",\n            \"tournamentId\": \"69abd7574d1bacb02df0be3d\"\n        },\n        {\n            \"name\": \"Torneo Apertura 3\",\n            \"startDate\": \"2024-06-01T00:00:00.000Z\",\n            \"endDate\": \"2024-07-01T00:00:00.000Z\",\n            \"createdAt\": \"2026-03-14T09:20:42.515Z\",\n            \"updatedAt\": \"2026-03-14T09:20:42.515Z\",\n            \"tournamentId\": \"69b5286a34f1d8279b95f90a\"\n        },\n        {\n            \"name\": \"Torneo Apertura 4\",\n            \"startDate\": \"2024-06-01T00:00:00.000Z\",\n            \"endDate\": \"2024-07-01T00:00:00.000Z\",\n            \"createdAt\": \"2026-03-14T09:23:23.647Z\",\n            \"updatedAt\": \"2026-03-14T09:23:23.647Z\",\n            \"tournamentId\": \"69b5290bffcd043b2b11c2e5\"\n        },\n        {\n            \"name\": \"Jornada 20\",\n            \"startDate\": \"2026-03-15T00:00:00.000Z\",\n            \"endDate\": \"2026-03-22T00:00:00.000Z\",\n            \"createdAt\": \"2026-03-14T10:05:23.009Z\",\n            \"updatedAt\": \"2026-03-14T10:05:23.009Z\",\n            \"tournamentId\": \"69b532e3e353a3146359f851\"\n        },\n        {\n            \"name\": \"Prueba 404\",\n            \"startDate\": \"2027-12-01T06:00:00.000Z\",\n            \"endDate\": \"2027-12-03T06:00:00.000Z\",\n            \"createdAt\": \"2026-04-18T07:06:24.405Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.405Z\",\n            \"tournamentId\": \"69e32d70d8a9f4293d211867\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Crear torneo",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Torneo Apertura 4\",\n  \"startDate\": \"2024-06-01\",\n  \"endDate\": \"2024-07-01\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/tournaments",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "tournaments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Crear torneo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Torneo Apertura 5\",\n  \"startDate\": \"2024-06-01\",\n  \"endDate\": \"2024-07-01\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/tournaments",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "tournaments"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "261"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"105-SYrJ6Dqgyd5fp6JdjULpwzgpFM8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:20:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Torneo creado\",\n    \"tournament\": {\n        \"name\": \"Torneo Apertura 5\",\n        \"startDate\": \"2024-06-01T00:00:00.000Z\",\n        \"endDate\": \"2024-07-01T00:00:00.000Z\",\n        \"createdAt\": \"2026-07-28T04:20:30.541Z\",\n        \"updatedAt\": \"2026-07-28T04:20:30.541Z\",\n        \"tournamentId\": \"6a682e0e590d9333b8818a5c\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Teams",
+      "item": [
+        {
+          "name": "Consulta",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/teams",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "teams"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Consulta",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/teams",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "teams"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "5180"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"143c-58LEDOXmawbrA4i0IZrxNFdre8Y\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:20:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"GetTeams\",\n    \"teams\": [\n        {\n            \"name\": \"America\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500/227.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Azteca\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:23:39.370Z\",\n            \"updatedAt\": \"2026-02-06T07:26:30.450Z\",\n            \"teamId\": \"698596fb8914b587e7345a6a\"\n        },\n        {\n            \"name\": \"Pumas\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/233.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Olimpico Universitario\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:26:00.029Z\",\n            \"updatedAt\": \"2026-02-06T07:26:00.029Z\",\n            \"teamId\": \"69859788abfbd58cea2da12f\"\n        },\n        {\n            \"name\": \"Tigres\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500-dark/232.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Prueba\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:43:07.380Z\",\n            \"updatedAt\": \"2026-02-06T07:43:07.380Z\",\n            \"teamId\": \"69859b8b1bf5d11aa771de3a\"\n        },\n        {\n            \"name\": \"Leon\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500/228.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Prueba\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:43:09.234Z\",\n            \"updatedAt\": \"2026-02-06T07:43:09.234Z\",\n            \"teamId\": \"69859b8d1bf5d11aa771de3e\"\n        },\n        {\n            \"name\": \"Chivas\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/219.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Prueba\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:43:12.349Z\",\n            \"updatedAt\": \"2026-02-06T07:43:12.349Z\",\n            \"teamId\": \"69859b901bf5d11aa771de42\"\n        },\n        {\n            \"name\": \"Queretaro\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/222.png\",\n            \"league\": \"La Liga\",\n            \"stadium\": \"Prueba\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-06T07:43:15.200Z\",\n            \"updatedAt\": \"2026-02-06T07:43:15.200Z\",\n            \"teamId\": \"69859b931bf5d11aa771de46\"\n        },\n        {\n            \"name\": \"Toluca\",\n            \"shortName\": \"TOL\",\n            \"logo\": \"https://via.placeholder.com/150\",\n            \"league\": \"Liga mx\",\n            \"stadium\": \"Estadio\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-02-11T07:49:07.131Z\",\n            \"updatedAt\": \"2026-02-11T07:49:07.131Z\",\n            \"teamId\": \"698c34733d247a5e89d692ea\"\n        },\n        {\n            \"name\": \"Inter\",\n            \"shortName\": \"INTE\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-03-07T08:28:24.620Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.620Z\",\n            \"teamId\": \"69abe1a81cc08709d7aa70ed\"\n        },\n        {\n            \"name\": \"Torino\",\n            \"shortName\": \"TORI\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-03-07T08:28:24.622Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.622Z\",\n            \"teamId\": \"69abe1a81cc08709d7aa70ef\"\n        },\n        {\n            \"name\": \"Manchester City\",\n            \"shortName\": \"MAN\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-03-07T08:28:24.627Z\",\n            \"updatedAt\": \"2026-04-18T06:36:29.757Z\",\n            \"teamId\": \"69abe1a81cc08709d7aa70f5\"\n        },\n        {\n            \"name\": \"NewCastle\",\n            \"shortName\": \"NEWC\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-03-07T08:28:24.628Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.628Z\",\n            \"teamId\": \"69abe1a81cc08709d7aa70f7\"\n        },\n        {\n            \"name\": \"Prueba 1\",\n            \"shortName\": \"RMD\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T06:23:29.951Z\",\n            \"updatedAt\": \"2026-04-18T06:23:29.951Z\",\n            \"teamId\": \"69e3236184f6a1c9bb9ddfa4\"\n        },\n        {\n            \"name\": \"Arsenal\",\n            \"shortName\": \"ARSE\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.445Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.445Z\",\n            \"teamId\": \"69e32d70d8a9f4293d21186b\"\n        },\n        {\n            \"name\": \"Bologna\",\n            \"shortName\": \"BOLO\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.475Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.475Z\",\n            \"teamId\": \"69e32d70d8a9f4293d211872\"\n        },\n        {\n            \"name\": \"Milan\",\n            \"shortName\": \"MILA\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.476Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.476Z\",\n            \"teamId\": \"69e32d70d8a9f4293d211874\"\n        },\n        {\n            \"name\": \"Olimpia\",\n            \"shortName\": \"OLIM\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.484Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.484Z\",\n            \"teamId\": \"69e32d70d8a9f4293d21187b\"\n        },\n        {\n            \"name\": \"San Diego\",\n            \"shortName\": \"SAN\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.494Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.494Z\",\n            \"teamId\": \"69e32d70d8a9f4293d211882\"\n        },\n        {\n            \"name\": \"Alaves\",\n            \"shortName\": \"ALAV\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.505Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.505Z\",\n            \"teamId\": \"69e32d70d8a9f4293d211893\"\n        },\n        {\n            \"name\": \"Real sociedad\",\n            \"shortName\": \"REAL\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.506Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.506Z\",\n            \"teamId\": \"69e32d70d8a9f4293d211895\"\n        },\n        {\n            \"name\": \"Valencia\",\n            \"shortName\": \"VALE\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.510Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.510Z\",\n            \"teamId\": \"69e32d70d8a9f4293d21189c\"\n        },\n        {\n            \"name\": \"Ath club\",\n            \"shortName\": \"ATH\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.511Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.511Z\",\n            \"teamId\": \"69e32d70d8a9f4293d21189e\"\n        },\n        {\n            \"name\": \"Vancouver\",\n            \"shortName\": \"VANC\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.515Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.515Z\",\n            \"teamId\": \"69e32d70d8a9f4293d2118a5\"\n        },\n        {\n            \"name\": \"Cruz Azul\",\n            \"shortName\": \"CRUZ\",\n            \"logo\": \"\",\n            \"league\": \"\",\n            \"stadium\": \"\",\n            \"enabled\": true,\n            \"createdAt\": \"2026-04-18T07:06:24.515Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.515Z\",\n            \"teamId\": \"69e32d70d8a9f4293d2118a7\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Crear Equipo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Prueba 1\",\n  \"shortName\": \"RMD\",\n  \"logo\": \"\",\n  \"league\": \"\",\n  \"stadium\": \"\",\n  \"enabled\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/teams",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "teams"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Crear Equipo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Prueba 2\",\n  \"shortName\": \"RMD\",\n  \"logo\": \"Na\",\n  \"league\": \"Liga1\",\n  \"stadium\": \"Zapata\",\n  \"enabled\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/teams",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "teams"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "245"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f5-LqD2cytRuUDsxVqvf61L4WQaWXQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:21:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Equipo creado\",\n    \"team\": {\n        \"name\": \"Prueba 2\",\n        \"shortName\": \"RMD\",\n        \"logo\": \"Na\",\n        \"league\": \"Liga1\",\n        \"stadium\": \"Zapata\",\n        \"enabled\": true,\n        \"createdAt\": \"2026-07-28T04:21:24.232Z\",\n        \"updatedAt\": \"2026-07-28T04:21:24.232Z\",\n        \"teamId\": \"6a682e44590d9333b8818a64\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Actualizar equipo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"America\",\n  \"shortName\": \"RMD\",\n  \"logo\": \"https://via.placeholder.com/150\",\n  \"league\": \"La Liga\",\n  \"stadium\": \"Azteca\",\n  \"enabled\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/teams/698596fb8914b587e7345a6a",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "teams",
+                "698596fb8914b587e7345a6a"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Actualizar equipo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Equipo Prueba\",\n  \"shortName\": \"RMD\",\n  \"logo\": \"https://via.placeholder.com/150\",\n  \"league\": \"La Liga\",\n  \"stadium\": \"Azteca\",\n  \"enabled\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/teams/6a682e44590d9333b8818a64",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "teams",
+                    "6a682e44590d9333b8818a64"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "286"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"11e-rV0aPUf9g51k9/wY2lIcpoqYF78\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:22:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Equipo actualizado\",\n    \"team\": {\n        \"name\": \"Equipo Prueba\",\n        \"shortName\": \"RMD\",\n        \"logo\": \"https://via.placeholder.com/150\",\n        \"league\": \"La Liga\",\n        \"stadium\": \"Azteca\",\n        \"enabled\": true,\n        \"createdAt\": \"2026-07-28T04:21:24.232Z\",\n        \"updatedAt\": \"2026-07-28T04:22:10.551Z\",\n        \"teamId\": \"6a682e44590d9333b8818a64\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/teams/69859a8d1bf5d11aa771de1c",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "teams",
+                "69859a8d1bf5d11aa771de1c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Eliminar",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/teams/6a682e44590d9333b8818a64",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "teams",
+                    "6a682e44590d9333b8818a64"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-d5cKkw7cCXz67I5x4aAQXhYwuY4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:22:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Equipo eliminado\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Matches",
+      "item": [
+        {
+          "name": "Consulta encuentros",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/matchs",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "matchs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Consulta encuentros",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/matchs",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "matchs"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "20944"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"51d0-glOFp9fsfIUKA5NwQ+hi1uxPFv4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:22:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"GetMatchs\",\n    \"matchs\": [\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 2,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-06T07:42:18.849Z\",\n            \"updatedAt\": \"2026-04-18T05:51:59.607Z\",\n            \"matchId\": \"69859b5a1bf5d11aa771de34\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 3,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-06T07:43:46.903Z\",\n            \"updatedAt\": \"2026-03-14T10:03:59.562Z\",\n            \"matchId\": \"69859bb21bf5d11aa771de4c\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69859b8b1bf5d11aa771de3a\",\n                \"name\": \"Tigres\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859b8d1bf5d11aa771de3e\",\n                \"name\": \"Leon\"\n            },\n            \"homeScore\": 5,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-11T08:07:11.058Z\",\n            \"updatedAt\": \"2026-03-14T10:03:22.586Z\",\n            \"matchId\": \"698c38af3d247a5e89d69318\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-13T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698c38633d247a5e89d6930e\",\n                \"name\": \"Jornada 2026 Prueba\"\n            },\n            \"createdAt\": \"2026-02-12T00:34:33.236Z\",\n            \"updatedAt\": \"2026-02-12T00:34:33.236Z\",\n            \"matchId\": \"698d201989d0abf876a3d043\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69859b901bf5d11aa771de42\",\n                \"name\": \"Chivas\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859b931bf5d11aa771de46\",\n                \"name\": \"Queretaro\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-21T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698c38633d247a5e89d6930e\",\n                \"name\": \"Jornada 2026 Prueba\"\n            },\n            \"createdAt\": \"2026-02-12T00:43:00.436Z\",\n            \"updatedAt\": \"2026-02-12T00:43:00.436Z\",\n            \"matchId\": \"698d2214f6466ff601438d70\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69859b901bf5d11aa771de42\",\n                \"name\": \"Chivas\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859b931bf5d11aa771de46\",\n                \"name\": \"Queretaro\"\n            },\n            \"homeScore\": 1,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-21T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-12T00:43:24.237Z\",\n            \"updatedAt\": \"2026-03-14T10:03:40.282Z\",\n            \"matchId\": \"698d222cf6466ff601438d76\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"698c34733d247a5e89d692ea\",\n                \"name\": \"Toluca\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-14T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698d5e9ff6466ff601438f5b\",\n                \"name\": \"Jornada de Prueba\"\n            },\n            \"createdAt\": \"2026-02-12T05:01:52.469Z\",\n            \"updatedAt\": \"2026-02-12T05:01:52.469Z\",\n            \"matchId\": \"698d5ec0f6466ff601438f6f\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.577Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.577Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70d5\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.607Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.607Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70dd\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.612Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.612Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70e3\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.617Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.617Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70e9\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.623Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.623Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70f1\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.629Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.629Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa70f9\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.634Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.634Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa7101\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.639Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.639Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa7109\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:28:24.644Z\",\n            \"updatedAt\": \"2026-03-07T08:28:24.644Z\",\n            \"matchId\": \"69abe1a81cc08709d7aa7111\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.162Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.162Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c4c\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.175Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.175Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c50\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.181Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.181Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c54\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.186Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.186Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c58\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.194Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.194Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c5c\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.226Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.226Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c60\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.283Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.283Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c64\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.286Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.286Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c68\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69abd7574d1bacb02df0be3d\",\n                \"name\": \"Torneo Apertura 2\"\n            },\n            \"createdAt\": \"2026-03-07T08:31:40.295Z\",\n            \"updatedAt\": \"2026-03-07T08:31:40.295Z\",\n            \"matchId\": \"69abe26cbeb704a8626d6c6c\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.595Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.595Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f910\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.626Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.626Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f915\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.638Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.638Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f91a\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.649Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.649Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f91f\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.660Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.660Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f924\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.670Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.670Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f929\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.680Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.680Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f92e\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.689Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.689Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f933\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5286a34f1d8279b95f90a\",\n                \"name\": \"Torneo Apertura 3\"\n            },\n            \"createdAt\": \"2026-03-14T09:20:58.702Z\",\n            \"updatedAt\": \"2026-03-14T09:20:58.702Z\",\n            \"matchId\": \"69b5287a34f1d8279b95f938\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.823Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.823Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c2eb\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.848Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.848Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c2f0\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.861Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.861Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c2f5\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.873Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.873Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c2fa\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.887Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.887Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c2ff\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.899Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.899Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c304\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.910Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.910Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c309\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.921Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.921Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c30e\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b5290bffcd043b2b11c2e5\",\n                \"name\": \"Torneo Apertura 4\"\n            },\n            \"createdAt\": \"2026-03-14T09:23:30.934Z\",\n            \"updatedAt\": \"2026-03-14T09:23:30.934Z\",\n            \"matchId\": \"69b52912ffcd043b2b11c313\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 2,\n            \"awayScore\": 3,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.868Z\",\n            \"updatedAt\": \"2026-03-14T10:06:19.569Z\",\n            \"matchId\": \"69b53300e353a3146359f864\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 1,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.881Z\",\n            \"updatedAt\": \"2026-03-14T10:06:42.631Z\",\n            \"matchId\": \"69b53300e353a3146359f869\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.898Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.898Z\",\n            \"matchId\": \"69b53300e353a3146359f86e\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.907Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.907Z\",\n            \"matchId\": \"69b53300e353a3146359f873\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.917Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.917Z\",\n            \"matchId\": \"69b53300e353a3146359f878\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.929Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.929Z\",\n            \"matchId\": \"69b53300e353a3146359f87d\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.939Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.939Z\",\n            \"matchId\": \"69b53300e353a3146359f882\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.950Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.950Z\",\n            \"matchId\": \"69b53300e353a3146359f887\"\n        },\n        {\n            \"homeTeam\": null,\n            \"awayTeam\": null,\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69b532e3e353a3146359f851\",\n                \"name\": \"Jornada 20\"\n            },\n            \"createdAt\": \"2026-03-14T10:05:52.959Z\",\n            \"updatedAt\": \"2026-03-14T10:05:52.959Z\",\n            \"matchId\": \"69b53300e353a3146359f88c\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d21186b\",\n                \"name\": \"Arsenal\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 21,\n            \"awayScore\": 22,\n            \"matchDate\": \"2026-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.466Z\",\n            \"updatedAt\": \"2026-04-18T07:17:28.495Z\",\n            \"matchId\": \"69e32d70d8a9f4293d21186e\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d211872\",\n                \"name\": \"Bologna\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d211874\",\n                \"name\": \"Milan\"\n            },\n            \"homeScore\": 5,\n            \"awayScore\": 0,\n            \"matchDate\": \"2027-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.479Z\",\n            \"updatedAt\": \"2026-04-18T07:16:45.239Z\",\n            \"matchId\": \"69e32d70d8a9f4293d211877\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d21187b\",\n                \"name\": \"Olimpia\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2028-02-04T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.490Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.490Z\",\n            \"matchId\": \"69e32d70d8a9f4293d21187e\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d211882\",\n                \"name\": \"San Diego\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2029-02-04T04:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.497Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.497Z\",\n            \"matchId\": \"69e32d70d8a9f4293d211885\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ed\",\n                \"name\": \"Inter\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70ef\",\n                \"name\": \"Torino\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2030-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.500Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.500Z\",\n            \"matchId\": \"69e32d70d8a9f4293d21188a\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f5\",\n                \"name\": \"Manchester City\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69abe1a81cc08709d7aa70f7\",\n                \"name\": \"NewCastle\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2031-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.503Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.503Z\",\n            \"matchId\": \"69e32d70d8a9f4293d21188f\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d211893\",\n                \"name\": \"Alaves\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d211895\",\n                \"name\": \"Real sociedad\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2032-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.508Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.508Z\",\n            \"matchId\": \"69e32d70d8a9f4293d211898\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d21189c\",\n                \"name\": \"Valencia\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d21189e\",\n                \"name\": \"Ath club\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2033-02-03T20:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.513Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.513Z\",\n            \"matchId\": \"69e32d70d8a9f4293d2118a1\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d2118a5\",\n                \"name\": \"Vancouver\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69e32d70d8a9f4293d2118a7\",\n                \"name\": \"Cruz Azul\"\n            },\n            \"homeScore\": 0,\n            \"awayScore\": 0,\n            \"matchDate\": \"2034-02-04T03:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"69e32d70d8a9f4293d211867\",\n                \"name\": \"Prueba 404\"\n            },\n            \"createdAt\": \"2026-04-18T07:06:24.517Z\",\n            \"updatedAt\": \"2026-04-18T07:06:24.517Z\",\n            \"matchId\": \"69e32d70d8a9f4293d2118aa\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Consulta encuentros por torneo",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/matchs/tournament/698595bc8914b587e7345a62",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "matchs",
+                "tournament",
+                "698595bc8914b587e7345a62"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Consulta encuentros por torneo",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/matchs/tournament/698595bc8914b587e7345a62",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "matchs",
+                    "tournament",
+                    "698595bc8914b587e7345a62"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2142"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"85e-bpTgk3Th9oMHoLYJybo96Kp8AI8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:22:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"GetMatchesByTournament\",\n    \"matches\": [\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\",\n                \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500/227.png\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\",\n                \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/233.png\"\n            },\n            \"homeScore\": 2,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-06T07:42:18.849Z\",\n            \"updatedAt\": \"2026-04-18T05:51:59.607Z\",\n            \"matchId\": \"69859b5a1bf5d11aa771de34\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"698596fb8914b587e7345a6a\",\n                \"name\": \"America\",\n                \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500/227.png\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859788abfbd58cea2da12f\",\n                \"name\": \"Pumas\",\n                \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/233.png\"\n            },\n            \"homeScore\": 3,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-06T07:43:46.903Z\",\n            \"updatedAt\": \"2026-03-14T10:03:59.562Z\",\n            \"matchId\": \"69859bb21bf5d11aa771de4c\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69859b8b1bf5d11aa771de3a\",\n                \"name\": \"Tigres\",\n                \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500-dark/232.png\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859b8d1bf5d11aa771de3e\",\n                \"name\": \"Leon\",\n                \"logo\": \"https://a.espncdn.com/i/teamlogos/soccer/500/228.png\"\n            },\n            \"homeScore\": 5,\n            \"awayScore\": 2,\n            \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-11T08:07:11.058Z\",\n            \"updatedAt\": \"2026-03-14T10:03:22.586Z\",\n            \"matchId\": \"698c38af3d247a5e89d69318\"\n        },\n        {\n            \"homeTeam\": {\n                \"_id\": \"69859b901bf5d11aa771de42\",\n                \"name\": \"Chivas\",\n                \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/219.png\"\n            },\n            \"awayTeam\": {\n                \"_id\": \"69859b931bf5d11aa771de46\",\n                \"name\": \"Queretaro\",\n                \"logo\": \"https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/222.png\"\n            },\n            \"homeScore\": 1,\n            \"awayScore\": 0,\n            \"matchDate\": \"2026-02-21T00:00:00.000Z\",\n            \"tournamentId\": {\n                \"_id\": \"698595bc8914b587e7345a62\",\n                \"name\": \"Torneo Apertura\"\n            },\n            \"createdAt\": \"2026-02-12T00:43:24.237Z\",\n            \"updatedAt\": \"2026-03-14T10:03:40.282Z\",\n            \"matchId\": \"698d222cf6466ff601438d76\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Crea encuentros",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"homeTeam\": \"69859b8b1bf5d11aa771de3a\",\n  \"awayTeam\": \"69859b8d1bf5d11aa771de3e\",\n  \"tournamentId\": \"698595bc8914b587e7345a62\",\n  \"matchDate\": \"2026-07-12\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/matchs",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "matchs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Crea encuentros",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"homeTeam\": \"69859b8b1bf5d11aa771de3a\",\n  \"awayTeam\": \"69859b8d1bf5d11aa771de3e\",\n  \"tournamentId\": \"69e32d70d8a9f4293d211867\",\n  \"matchDate\": \"2026-09-13\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/matchs",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "matchs"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "334"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14e-n0S/aCw/LytRocdvSr+OOHKKFr0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:23:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Partido creado\",\n    \"match\": {\n        \"homeTeam\": \"69859b8b1bf5d11aa771de3a\",\n        \"awayTeam\": \"69859b8d1bf5d11aa771de3e\",\n        \"homeScore\": 0,\n        \"awayScore\": 0,\n        \"matchDate\": \"2026-09-13T00:00:00.000Z\",\n        \"tournamentId\": \"69e32d70d8a9f4293d211867\",\n        \"createdAt\": \"2026-07-28T04:23:16.712Z\",\n        \"updatedAt\": \"2026-07-28T04:23:16.712Z\",\n        \"matchId\": \"6a682eb4590d9333b8818a7f\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Actualiza encuentro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"homeTeam\": \"698596fb8914b587e7345a6a\",\n  \"awayTeam\": \"69859788abfbd58cea2da12f\",\n  \"tournamentId\": \"698595bc8914b587e7345a62\",\n  \"homeScore\": 2,\n  \"awayScore\": 2,\n  \"matchDate\": \"2026-07-12\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/matchs/69859bb21bf5d11aa771de4c",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "matchs",
+                "69859bb21bf5d11aa771de4c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Actualiza encuentro",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"homeTeam\": \"69859b8b1bf5d11aa771de3a\",\n  \"awayTeam\": \"69859b8d1bf5d11aa771de3e\",\n  \"tournamentId\": \"69e32d70d8a9f4293d211867\",\n  \"homeScore\": 2,\n  \"awayScore\": 2,\n  \"matchDate\": \"2026-07-12\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/matchs/69859bb21bf5d11aa771de4c",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "matchs",
+                    "69859bb21bf5d11aa771de4c"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "339"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"153-+Upy9lqKM6JU+e83i3P6Md7zH9M\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:23:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Partido actualizado\",\n    \"match\": {\n        \"homeTeam\": \"69859b8b1bf5d11aa771de3a\",\n        \"awayTeam\": \"69859b8d1bf5d11aa771de3e\",\n        \"homeScore\": 2,\n        \"awayScore\": 2,\n        \"matchDate\": \"2026-07-12T00:00:00.000Z\",\n        \"tournamentId\": \"69e32d70d8a9f4293d211867\",\n        \"createdAt\": \"2026-02-06T07:43:46.903Z\",\n        \"updatedAt\": \"2026-07-28T04:23:40.808Z\",\n        \"matchId\": \"69859bb21bf5d11aa771de4c\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Elimina encuentro",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/matchs/69859a9d1bf5d11aa771de24",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "matchs",
+                "69859a9d1bf5d11aa771de24"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Elimina encuentro",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/matchs/69859bb21bf5d11aa771de4c",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "matchs",
+                    "69859bb21bf5d11aa771de4c"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "27"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1b-71cvdHUzHxlsxKWtdj92N0YHk40\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:24:08 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Partido eliminado\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ticket",
+      "item": [
+        {
+          "name": "Crear Ticket",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tournamentId\": \"698595bc8914b587e7345a62\",\n  \"nickName\": \"Usuario1\",\n  \"folio\": \"\",\n  \"predictions\": [\n    {\n      \"matchId\": \"69859b5a1bf5d11aa771de34\",\n      \"result\": \"AWAY_WIN\"\n    },\n    {\n      \"matchId\": \"698c38af3d247a5e89d69318\",\n      \"result\": \"AWAY_WIN\"\n    },\n    {\n      \"matchId\": \"698d222cf6466ff601438d76\",\n      \"result\": \"AWAY_WIN\"\n    },\n    {\n      \"matchId\": \"69859bb21bf5d11aa771de4c\",\n      \"result\": \"AWAY_WIN\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/tickets",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "tickets"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Crear Ticket",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tournamentId\": \"698595bc8914b587e7345a62\",\n  \"nickName\": \"Usuario1\",\n  \"folio\": \"\",\n  \"predictions\": [\n    {\n      \"matchId\": \"69859b5a1bf5d11aa771de34\",\n      \"result\": \"AWAY_WIN\"\n    },\n    {\n      \"matchId\": \"698c38af3d247a5e89d69318\",\n      \"result\": \"AWAY_WIN\"\n    },\n    {\n      \"matchId\": \"698d222cf6466ff601438d76\",\n      \"result\": \"AWAY_WIN\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/tickets",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "tickets"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "813"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"32d-ZardAzLn5TWN/S2ztWylHR4JFMQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:24:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Ticket creado correctamente\",\n    \"ticket\": {\n        \"userId\": \"69843c3b38476b2ff7e8d94c\",\n        \"tournamentId\": \"698595bc8914b587e7345a62\",\n        \"nickName\": \"Usuario1\",\n        \"folio\": \"\",\n        \"predictions\": [\n            {\n                \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                \"result\": \"AWAY_WIN\",\n                \"_id\": \"6a682ef8590d9333b8818a8d\",\n                \"registerDate\": \"2026-07-28T04:24:24.795Z\",\n                \"updateDate\": \"2026-07-28T04:24:24.795Z\"\n            },\n            {\n                \"matchId\": \"698c38af3d247a5e89d69318\",\n                \"result\": \"AWAY_WIN\",\n                \"_id\": \"6a682ef8590d9333b8818a8e\",\n                \"registerDate\": \"2026-07-28T04:24:24.795Z\",\n                \"updateDate\": \"2026-07-28T04:24:24.795Z\"\n            },\n            {\n                \"matchId\": \"698d222cf6466ff601438d76\",\n                \"result\": \"AWAY_WIN\",\n                \"_id\": \"6a682ef8590d9333b8818a8f\",\n                \"registerDate\": \"2026-07-28T04:24:24.796Z\",\n                \"updateDate\": \"2026-07-28T04:24:24.796Z\"\n            }\n        ],\n        \"createdAt\": \"2026-07-28T04:24:24.800Z\",\n        \"updatedAt\": \"2026-07-28T04:24:24.800Z\",\n        \"ticketId\": \"6a682ef8590d9333b8818a8c\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Crear Ticket Masivo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "768363a0-53ae-478c-a149-39a426c0e721",
+                  "src": "/Users/jaredgonzalez/Downloads/PARTIDOS (5).xlsx"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/api/tickets/upload/69b532e3e353a3146359f851",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "upload",
+                "69b532e3e353a3146359f851"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Consultar tickets",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/tickets/698595bc8914b587e7345a62",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "tickets",
+                "698595bc8914b587e7345a62"
+              ],
+              "query": [
+                {
+                  "key": "tournamentId",
+                  "value": "698595bc8914b587e7345a62",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Consultar tickets",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/tickets/698595bc8914b587e7345a62",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "tickets",
+                    "698595bc8914b587e7345a62"
+                  ],
+                  "query": [
+                    {
+                      "key": "tournamentId",
+                      "value": "698595bc8914b587e7345a62",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "8332"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"208c-pz6jl8I6uCjmDaVAz2W6gWziwBA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:24:55 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Tickets obtenidos correctamente\",\n    \"tickets\": [\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"HOME_WIN\",\n                    \"_id\": \"69904163017fcdf8999897a2\",\n                    \"registerDate\": \"2026-02-14T09:33:23.250Z\",\n                    \"updateDate\": \"2026-02-14T09:33:23.251Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"HOME_WIN\",\n                    \"_id\": \"69904163017fcdf8999897a3\",\n                    \"registerDate\": \"2026-02-14T09:33:23.252Z\",\n                    \"updateDate\": \"2026-02-14T09:33:23.252Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"HOME_WIN\",\n                    \"_id\": \"69904163017fcdf8999897a4\",\n                    \"registerDate\": \"2026-02-14T09:33:23.252Z\",\n                    \"updateDate\": \"2026-02-14T09:33:23.252Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"HOME_WIN\",\n                    \"_id\": \"69904163017fcdf8999897a5\",\n                    \"registerDate\": \"2026-02-14T09:33:23.252Z\",\n                    \"updateDate\": \"2026-02-14T09:33:23.252Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T09:33:23.256Z\",\n            \"updatedAt\": \"2026-02-14T09:33:23.256Z\",\n            \"ticketId\": \"69904163017fcdf8999897a1\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"DRAW\",\n                    \"_id\": \"6990460dda994e6e92a9a0f4\",\n                    \"registerDate\": \"2026-02-14T09:53:17.460Z\",\n                    \"updateDate\": \"2026-02-14T09:53:17.460Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"DRAW\",\n                    \"_id\": \"6990460dda994e6e92a9a0f5\",\n                    \"registerDate\": \"2026-02-14T09:53:17.460Z\",\n                    \"updateDate\": \"2026-02-14T09:53:17.460Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"DRAW\",\n                    \"_id\": \"6990460dda994e6e92a9a0f6\",\n                    \"registerDate\": \"2026-02-14T09:53:17.461Z\",\n                    \"updateDate\": \"2026-02-14T09:53:17.461Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"DRAW\",\n                    \"_id\": \"6990460dda994e6e92a9a0f7\",\n                    \"registerDate\": \"2026-02-14T09:53:17.461Z\",\n                    \"updateDate\": \"2026-02-14T09:53:17.461Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T09:53:17.465Z\",\n            \"updatedAt\": \"2026-02-14T09:53:17.465Z\",\n            \"ticketId\": \"6990460dda994e6e92a9a0f3\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904723da994e6e92a9a152\",\n                    \"registerDate\": \"2026-02-14T09:57:55.451Z\",\n                    \"updateDate\": \"2026-02-14T09:57:55.451Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904723da994e6e92a9a153\",\n                    \"registerDate\": \"2026-02-14T09:57:55.451Z\",\n                    \"updateDate\": \"2026-02-14T09:57:55.451Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904723da994e6e92a9a154\",\n                    \"registerDate\": \"2026-02-14T09:57:55.451Z\",\n                    \"updateDate\": \"2026-02-14T09:57:55.451Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904723da994e6e92a9a155\",\n                    \"registerDate\": \"2026-02-14T09:57:55.452Z\",\n                    \"updateDate\": \"2026-02-14T09:57:55.452Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T09:57:55.454Z\",\n            \"updatedAt\": \"2026-02-14T09:57:55.454Z\",\n            \"ticketId\": \"69904723da994e6e92a9a151\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbbda994e6e92a9a5b6\",\n                    \"registerDate\": \"2026-02-14T10:26:03.873Z\",\n                    \"updateDate\": \"2026-02-14T10:26:03.873Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbbda994e6e92a9a5b7\",\n                    \"registerDate\": \"2026-02-14T10:26:03.873Z\",\n                    \"updateDate\": \"2026-02-14T10:26:03.873Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbbda994e6e92a9a5b8\",\n                    \"registerDate\": \"2026-02-14T10:26:03.873Z\",\n                    \"updateDate\": \"2026-02-14T10:26:03.873Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbbda994e6e92a9a5b9\",\n                    \"registerDate\": \"2026-02-14T10:26:03.873Z\",\n                    \"updateDate\": \"2026-02-14T10:26:03.873Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T10:26:03.875Z\",\n            \"updatedAt\": \"2026-02-14T10:26:03.875Z\",\n            \"ticketId\": \"69904dbbda994e6e92a9a5b5\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbcda994e6e92a9a5be\",\n                    \"registerDate\": \"2026-02-14T10:26:04.673Z\",\n                    \"updateDate\": \"2026-02-14T10:26:04.673Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbcda994e6e92a9a5bf\",\n                    \"registerDate\": \"2026-02-14T10:26:04.673Z\",\n                    \"updateDate\": \"2026-02-14T10:26:04.673Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbcda994e6e92a9a5c0\",\n                    \"registerDate\": \"2026-02-14T10:26:04.673Z\",\n                    \"updateDate\": \"2026-02-14T10:26:04.673Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbcda994e6e92a9a5c1\",\n                    \"registerDate\": \"2026-02-14T10:26:04.673Z\",\n                    \"updateDate\": \"2026-02-14T10:26:04.673Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T10:26:04.674Z\",\n            \"updatedAt\": \"2026-02-14T10:26:04.674Z\",\n            \"ticketId\": \"69904dbcda994e6e92a9a5bd\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5c6\",\n                    \"registerDate\": \"2026-02-14T10:26:05.217Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.217Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5c7\",\n                    \"registerDate\": \"2026-02-14T10:26:05.217Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.217Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5c8\",\n                    \"registerDate\": \"2026-02-14T10:26:05.218Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.218Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5c9\",\n                    \"registerDate\": \"2026-02-14T10:26:05.218Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.218Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T10:26:05.218Z\",\n            \"updatedAt\": \"2026-02-14T10:26:05.218Z\",\n            \"ticketId\": \"69904dbdda994e6e92a9a5c5\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5ce\",\n                    \"registerDate\": \"2026-02-14T10:26:05.708Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.708Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5cf\",\n                    \"registerDate\": \"2026-02-14T10:26:05.708Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.708Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5d0\",\n                    \"registerDate\": \"2026-02-14T10:26:05.708Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.708Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69904dbdda994e6e92a9a5d1\",\n                    \"registerDate\": \"2026-02-14T10:26:05.708Z\",\n                    \"updateDate\": \"2026-02-14T10:26:05.708Z\"\n                }\n            ],\n            \"createdAt\": \"2026-02-14T10:26:05.709Z\",\n            \"updatedAt\": \"2026-02-14T10:26:05.709Z\",\n            \"ticketId\": \"69904dbdda994e6e92a9a5cd\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69abd76c4d1bacb02df0be42\",\n                    \"registerDate\": \"2026-03-07T07:44:44.659Z\",\n                    \"updateDate\": \"2026-03-07T07:44:44.659Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69abd76c4d1bacb02df0be43\",\n                    \"registerDate\": \"2026-03-07T07:44:44.659Z\",\n                    \"updateDate\": \"2026-03-07T07:44:44.659Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69abd76c4d1bacb02df0be44\",\n                    \"registerDate\": \"2026-03-07T07:44:44.660Z\",\n                    \"updateDate\": \"2026-03-07T07:44:44.660Z\"\n                },\n                {\n                    \"matchId\": \"69859bb21bf5d11aa771de4c\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"69abd76c4d1bacb02df0be45\",\n                    \"registerDate\": \"2026-03-07T07:44:44.660Z\",\n                    \"updateDate\": \"2026-03-07T07:44:44.660Z\"\n                }\n            ],\n            \"createdAt\": \"2026-03-07T07:44:44.662Z\",\n            \"updatedAt\": \"2026-03-07T07:44:44.662Z\",\n            \"ticketId\": \"69abd76c4d1bacb02df0be41\"\n        },\n        {\n            \"userId\": \"69843c3b38476b2ff7e8d94c\",\n            \"tournamentId\": \"698595bc8914b587e7345a62\",\n            \"nickName\": \"Usuario1\",\n            \"folio\": \"\",\n            \"predictions\": [\n                {\n                    \"matchId\": \"69859b5a1bf5d11aa771de34\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"6a682ef8590d9333b8818a8d\",\n                    \"registerDate\": \"2026-07-28T04:24:24.795Z\",\n                    \"updateDate\": \"2026-07-28T04:24:24.795Z\"\n                },\n                {\n                    \"matchId\": \"698c38af3d247a5e89d69318\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"6a682ef8590d9333b8818a8e\",\n                    \"registerDate\": \"2026-07-28T04:24:24.795Z\",\n                    \"updateDate\": \"2026-07-28T04:24:24.795Z\"\n                },\n                {\n                    \"matchId\": \"698d222cf6466ff601438d76\",\n                    \"result\": \"AWAY_WIN\",\n                    \"_id\": \"6a682ef8590d9333b8818a8f\",\n                    \"registerDate\": \"2026-07-28T04:24:24.796Z\",\n                    \"updateDate\": \"2026-07-28T04:24:24.796Z\"\n                }\n            ],\n            \"createdAt\": \"2026-07-28T04:24:24.800Z\",\n            \"updatedAt\": \"2026-07-28T04:24:24.800Z\",\n            \"ticketId\": \"6a682ef8590d9333b8818a8c\"\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Listar usuarios",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/users?page=1&limit=10",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Listar usuarios",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/users?page=1&limit=10",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1159"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"getUsuarios\",\n    \"total\": 4,\n    \"page\": 1,\n    \"limit\": 10,\n    \"users\": [\n        {\n            \"name\": \"Jared Levi\",\n            \"lastname\": \"Gonzalez\",\n            \"email\": \"example@algo.com\",\n            \"role\": \"user\",\n            \"enabled\": true,\n            \"google\": false,\n            \"uid\": \"69843c3b38476b2ff7e8d94c\"\n        },\n        {\n            \"name\": \"Jared Levi\",\n            \"lastname\": \"Gonzalez\",\n            \"email\": \"jared@gmail.com\",\n            \"role\": \"user\",\n            \"enabled\": true,\n            \"google\": false,\n            \"uid\": \"6987e4447269c0074c3eb056\"\n        },\n        {\n            \"name\": \"Jared Levi\",\n            \"lastname\": \"Gonzalez\",\n            \"email\": \"jared1@gmail.com\",\n            \"role\": \"user\",\n            \"enabled\": true,\n            \"google\": false,\n            \"uid\": \"6a682dc7590d9333b8818a52\"\n        },\n        {\n            \"name\": \"Temp\",\n            \"lastname\": \"Admin\",\n            \"email\": \"tmpadmin_1785217122@example.com\",\n            \"role\": \"admin\",\n            \"enabled\": true,\n            \"google\": false,\n            \"uid\": \"6a684062a066796c02f347ff\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Detalle de usuario",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a682dc7590d9333b8818a52"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Detalle de usuario",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "6a682dc7590d9333b8818a52"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "263"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"getUsuario\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": \"user\",\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Actualizar usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jared Levi\",\n  \"lastname\": \"Gonzalez\",\n  \"email\": \"jared1@gmail.com\",\n  \"enabled\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a682dc7590d9333b8818a52"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Actualizar usuario",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Jared Levi\",\n  \"lastname\": \"Gonzalez\",\n  \"email\": \"jared1@gmail.com\",\n  \"enabled\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "6a682dc7590d9333b8818a52"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "272"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Usuario actualizado\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": \"user\",\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Cambiar rol",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"moderator\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52/role",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a682dc7590d9333b8818a52",
+                "role"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Cambiar rol",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"role\": \"moderator\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52/role",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "6a682dc7590d9333b8818a52",
+                    "role"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "273"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Rol actualizado\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": \"moderator\",\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Reactivar usuario",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52/enable",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a682dc7590d9333b8818a52",
+                "enable"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Reactivar usuario",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52/enable",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "6a682dc7590d9333b8818a52",
+                    "enable"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "276"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Usuario reactivado\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": \"moderator\",\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Desactivar usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a682dc7590d9333b8818a52"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Desactivar usuario",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "x-token",
+                    "value": "{{token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/api/users/6a682dc7590d9333b8818a52",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "6a682dc7590d9333b8818a52"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "278"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"Usuario Desactivado\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": \"moderator\",\n        \"enabled\": false,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AUTH",
+      "item": [
+        {
+          "name": "Validar token",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2OTg3ZTQ0NDcyNjljMDA3NGMzZWIwNTYiLCJpYXQiOjE3NzA3OTU3NjZ9.5bRX9al67_1apaodaI14NE2M8fhJCfDD7PQ-H9sH5yE",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/auth/check-auth-status",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "check-auth-status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Validar token",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Jared Levi\",\n    \"lastname\": \"Gonzalez\",\n    \"email\": \"jared@gmail.com\",\n    \"password\": \"123456\",\n    \"img\": \"url\",\n    \"role\": 0,\n    \"state\": false,\n    \"google\": false\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "users"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Jared Levi\",\n    \"lastname\": \"Gonzalez\",\n    \"email\": \"jared@gmail.com\",\n    \"password\": \"123456\",\n    \"img\": \"url\",\n    \"role\": 0,\n    \"state\": false,\n    \"google\": false\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Jared Levi\",\n    \"lastname\": \"Gonzalez\",\n    \"email\": \"jared1@gmail.com\",\n    \"password\": \"123456\",\n    \"img\": \"url\",\n    \"role\": 0,\n    \"state\": false,\n    \"google\": false\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8000/api/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "172"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ac-ByOovRzoRK4IRs6RczEZe/xa6/E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Jul 2026 04:19:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"msg\": \"User created\",\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"jared1@gmail.com\",\n        \"role\": 0,\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"6a682dc7590d9333b8818a52\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "",
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"token\");",
+                  "});",
+                  "",
+                  "pm.environment.set(\"token\", pm.response.json().token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"example@algo.com\",\n    \"password\": \"13212\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/auth",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "auth"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"example@algo.com\",\n    \"password\": \"13212\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/auth",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"user\": {\n        \"name\": \"Jared Levi\",\n        \"lastname\": \"Gonzalez\",\n        \"email\": \"example@algo.com\",\n        \"role\": 0,\n        \"enabled\": true,\n        \"google\": false,\n        \"uid\": \"69843c3b38476b2ff7e8d94c\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2OTg0M2MzYjM4NDc2YjJmZjdlOGQ5NGMiLCJpYXQiOjE3ODUyMTIzOTJ9.FV9yiUfCqaahDb4hAQq16weTaJe7MFnrbFNyGT1Ipy0\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
