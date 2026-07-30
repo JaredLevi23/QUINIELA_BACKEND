@@ -1,0 +1,31 @@
+<div class="field" style="text-align:left;">
+  <label for="nickName">Nickname</label>
+  <input id="nickName" type="text" class="input" [value]="nickName" (input)="nickName = $any($event.target).value" placeholder="Nombre del participante">
+</div>
+
+<div class="flex-col gap-2 mt-3" style="text-align:left;">
+  <div class="prediction-row" *ngFor="let item of matchs">
+    <label class="prediction-item">
+      <input type="radio" class="radio-input" [name]="'match-' + item.matchId"
+        [checked]="isSelected(item.matchId, 'HOME_WIN')"
+        (change)="selectResult(item.matchId, 'HOME_WIN')">
+      {{ item.homeTeam.name }}
+    </label>
+    <label class="prediction-item">
+      <input type="radio" class="radio-input" [name]="'match-' + item.matchId"
+        [checked]="isSelected(item.matchId, 'DRAW')"
+        (change)="selectResult(item.matchId, 'DRAW')">
+      Empate
+    </label>
+    <label class="prediction-item">
+      {{ item.awayTeam.name }}
+      <input type="radio" class="radio-input" [name]="'match-' + item.matchId"
+        [checked]="isSelected(item.matchId, 'AWAY_WIN')"
+        (change)="selectResult(item.matchId, 'AWAY_WIN')">
+    </label>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary mt-3" [disabled]="!isComplete || saving" (click)="saveTicket()">
+  {{ saving ? 'Guardando...' : 'Guardar ticket' }}
+</button>

@@ -1,0 +1,58 @@
+<h1>Encuentros</h1>
+
+<div class="flex gap-2 mt-3">
+  <button (click)="gotoMatches()" type="button" class="btn btn-primary">Encuentros</button>
+  <button (click)="gotoResults()" type="button" class="btn btn-secondary">Resultados</button>
+</div>
+
+<div *ngIf="matchs() && matchs().length > 0; else noMatches" class="mt-4">
+  <div class="only-desktop table-scroll">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Equipo Local</th>
+          <th>Equipo Visitante</th>
+          <th>Resultado</th>
+          <th>Fecha</th>
+          <th>Torneo</th>
+          <th *ngIf="isAdmin()">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let match of matchs()">
+          <td>{{ match.homeTeam.name }}</td>
+          <td>{{ match.awayTeam.name }}</td>
+          <td><span class="tag tag-accent">{{ match.homeScore }} - {{ match.awayScore }}</span></td>
+          <td>{{ match.matchDate | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ match.tournamentId.name }}</td>
+          <td *ngIf="isAdmin()">
+            <button class="btn btn-secondary btn-sm" (click)="editMatch(match)">Editar</button>
+            <button class="btn btn-secondary btn-sm" (click)="deleteMatch(match)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="only-mobile flex-col gap-3">
+    <div class="card elev-sm" *ngFor="let match of matchs()">
+      <div class="flex-between">
+        <span class="text-muted" style="font-size:13px;">{{ match.matchDate | date: 'dd/MM/yyyy' }}</span>
+        <span class="tag tag-outline">{{ match.tournamentId.name }}</span>
+      </div>
+      <div class="flex-between mt-2">
+        <strong style="flex:1;">{{ match.homeTeam.name }}</strong>
+        <span class="tag tag-accent" style="font-size:14px;">{{ match.homeScore }} - {{ match.awayScore }}</span>
+        <strong style="flex:1; text-align:right;">{{ match.awayTeam.name }}</strong>
+      </div>
+      <div class="flex gap-2 mt-3" style="justify-content:center;" *ngIf="isAdmin()">
+        <button class="btn btn-secondary btn-sm" (click)="editMatch(match)">Editar</button>
+        <button class="btn btn-secondary btn-sm" (click)="deleteMatch(match)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noMatches>
+  <p class="text-muted mt-4">No hay partidos registrados</p>
+</ng-template>

@@ -1,0 +1,34 @@
+<h1>Crear encuentro</h1>
+
+<form [formGroup]="matchForm" (ngSubmit)="onSubmit()" class="mt-4" style="max-width:420px;">
+  <div class="field mt-3">
+    <label for="homeTeam">Equipo local</label>
+    <select id="homeTeam" class="input" formControlName="homeTeam">
+      <option value="">Selecciona equipo</option>
+      <option *ngFor="let team of teams" [value]="team.teamId">{{ team.name }}</option>
+    </select>
+  </div>
+
+  <div class="field mt-3">
+    <label for="awayTeam">Equipo visitante</label>
+    <select id="awayTeam" class="input" formControlName="awayTeam">
+      <option value="">Selecciona equipo</option>
+      <option *ngFor="let team of teams" [value]="team.teamId">{{ team.name }}</option>
+    </select>
+  </div>
+
+  <div class="field mt-3">
+    <label for="tournamentId">Torneo</label>
+    <select id="tournamentId" class="input" formControlName="tournamentId">
+      <option value="">Selecciona torneo</option>
+      <option *ngFor="let tournament of tournaments()" [value]="tournament.tournamentId">{{ tournament.name }}</option>
+    </select>
+  </div>
+
+  <div class="field mt-3">
+    <label for="matchDate">Fecha del partido</label>
+    <input id="matchDate" type="date" class="input" formControlName="matchDate">
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-4" [disabled]="!matchForm.valid">Crear encuentro</button>
+</form>

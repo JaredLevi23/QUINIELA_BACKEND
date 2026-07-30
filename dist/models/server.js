@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
 const auth_1 = __importDefault(require("../routes/auth"));
 const categories_1 = __importDefault(require("../routes/categories"));
 const user_1 = __importDefault(require("../routes/user"));
@@ -67,6 +68,10 @@ class Server {
         this.app.use(this.apiPaths.matchs, match_1.default);
         this.app.use(this.apiPaths.tournament, tournament_1.default);
         this.app.use(this.apiPaths.tickets, ticket_1.default);
+        // Fallback SPA: cualquier ruta que no sea /api/* devuelve el index.html de Angular
+        this.app.get('/*splat', (_req, res) => {
+            res.sendFile(path_1.default.join(process.cwd(), 'public', 'index.html'));
+        });
     }
     listen() {
         this.app.listen(this.port, () => {

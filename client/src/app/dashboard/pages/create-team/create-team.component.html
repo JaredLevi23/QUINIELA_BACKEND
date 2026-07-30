@@ -1,0 +1,42 @@
+<h1>{{ isEditMode ? 'Editar equipo' : 'Crear equipo' }}</h1>
+
+<form [formGroup]="teamForm" (ngSubmit)="onSubmit()" class="mt-4" style="max-width:420px;">
+
+  <div class="field mt-3">
+    <label for="name">Nombre</label>
+    <input id="name" formControlName="name" class="input" />
+    <div *ngIf="f['name'].touched && f['name'].invalid" class="field-error">Nombre es requerido.</div>
+  </div>
+
+  <div class="field mt-3">
+    <label for="shortName">Nombre corto</label>
+    <input id="shortName" formControlName="shortName" class="input" />
+    <div *ngIf="f['shortName'].touched && f['shortName'].invalid" class="field-error">Nombre corto es requerido (max 5).</div>
+  </div>
+
+  <div class="field mt-3">
+    <label for="logo">Logo (URL)</label>
+    <input id="logo" formControlName="logo" class="input" />
+    <div *ngIf="f['logo'].touched && f['logo'].invalid" class="field-error">Introduce una URL válida de imagen.</div>
+  </div>
+
+  <div class="field mt-3">
+    <label for="league">Liga</label>
+    <input id="league" formControlName="league" class="input" />
+    <div *ngIf="f['league'].touched && f['league'].invalid" class="field-error">Liga es requerida.</div>
+  </div>
+
+  <div class="field mt-3">
+    <label for="stadium">Estadio</label>
+    <input id="stadium" formControlName="stadium" class="input" />
+    <div *ngIf="f['stadium'].touched && f['stadium'].invalid" class="field-error">Estadio es requerido.</div>
+  </div>
+
+  <label class="flex gap-2 mt-3" style="align-items:center; font-size:14px;">
+    <input type="checkbox" class="check" formControlName="enabled" /> Habilitado
+  </label>
+
+  <button type="submit" class="btn btn-primary mt-4" [disabled]="teamForm.invalid">
+    {{ isEditMode ? 'Actualizar equipo' : 'Guardar equipo' }}
+  </button>
+</form>

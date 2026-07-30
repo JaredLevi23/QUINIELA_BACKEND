@@ -1,0 +1,40 @@
+<div class="nav">
+  <a routerLink="/" class="nav-brand">Quiniela <span style="color:var(--color-accent)">Amigos</span></a>
+  <div class="nav-links">
+    <a routerLink="/about">Acerca de</a>
+    <a routerLink="/contact">Contacto</a>
+  </div>
+  <div class="nav-user">
+    <a routerLink="/auth/login" class="btn btn-primary">Iniciar sesión</a>
+  </div>
+</div>
+
+<div class="qc-page" style="max-width:900px;">
+  <div class="mt-8" style="max-width:560px;">
+    <div class="card-kicker">Quinielas entre amigos</div>
+    <h1 class="mt-2">Organiza tus torneos y compite por la tabla de posiciones</h1>
+    <p class="text-muted mt-3">
+      Crea torneos, registra encuentros y equipos, y deja que cada participante haga su
+      pronóstico. Sigue los aciertos de todos en una sola tabla de posiciones.
+    </p>
+    <a routerLink="/auth/login" class="btn btn-primary mt-3">Empezar ahora</a>
+  </div>
+
+  <div class="flex flex-wrap gap-4 mt-8">
+    <div class="card elev-sm" style="flex:1; min-width:220px;">
+      <div class="card-kicker">Torneos</div>
+      <div class="card-title">Organiza cada temporada</div>
+      <p class="card-body">Crea torneos y da seguimiento a sus encuentros y equipos en un solo lugar.</p>
+    </div>
+    <div class="card elev-sm" style="flex:1; min-width:220px;">
+      <div class="card-kicker">Pronósticos</div>
+      <div class="card-title">Compite con tus amigos</div>
+      <p class="card-body">Cada participante elige un ganador por encuentro y suma puntos por acierto.</p>
+    </div>
+    <div class="card elev-sm" style="flex:1; min-width:220px;">
+      <div class="card-kicker">Posiciones</div>
+      <div class="card-title">Tabla en tiempo real</div>
+      <p class="card-body">Consulta quién va a la cabeza según los aciertos acumulados del grupo.</p>
+    </div>
+  </div>
+</div>

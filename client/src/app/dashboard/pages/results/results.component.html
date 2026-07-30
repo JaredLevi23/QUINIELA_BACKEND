@@ -1,0 +1,86 @@
+<h1>Resultados</h1>
+
+<div class="flex-between flex-wrap gap-2 mt-3">
+  <div class="flex gap-2 flex-wrap">
+    <button (click)="gotoMatches()" type="button" class="btn btn-secondary">Encuentros</button>
+    <button (click)="gotoResults()" type="button" class="btn btn-primary">Resultados</button>
+    <button (click)="toggleView()" type="button" class="btn btn-secondary">
+      {{ isTableView ? 'Vista Lista' : 'Vista Tabla' }}
+    </button>
+  </div>
+  <button (click)="showCreateTicket()" type="button" class="btn btn-primary">Agregar</button>
+</div>
+
+<div *ngIf="tickets() && tickets().length > 0; else noMatches">
+
+  <div *ngIf="isTableView" class="table-scroll mt-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Participante</th>
+          <th>Pronósticos</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets()">
+          <td>{{ ticket.nickName || 'Desconocido' }}</td>
+          <td class="text-muted">{{ getNumberOfPredictions(ticket) }}</td>
+          <td>
+            <span class="tag" [ngClass]="getSuccessfulPredictions(ticket) === getNumberOfPredictions(ticket) ? 'tag-accent' : 'tag-outline'">
+              Aciertos: {{ getSuccessfulPredictions(ticket) }}/{{ getNumberOfPredictions(ticket) }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!isTableView" class="matches-container mt-4">
+  <div *ngFor="let selectedTicket of sortedTickets()" class="card elev-sm match-card">
+    <div class="card-kicker">{{ selectedTicket.nickName || 'Desconocido' }}</div>
+    <p class="card-body" style="margin:0;">
+      Aciertos: {{ getSuccessfulPredictions(selectedTicket) }}/{{ getNumberOfPredictions(selectedTicket) }}
+    </p>
+
+    <div class="flex-col gap-2 mt-2">
+      <div *ngFor="let item of selectedTicket.predictions" class="prediction-row">
+        <label class="prediction-item">
+          <img *ngIf="getTeamNameByMatchs(item.matchId, 'LOCAL')?.logo" [src]="getTeamNameByMatchs(item.matchId, 'LOCAL')?.logo" width="16" height="16">
+          <input type="checkbox" [checked]="item.result === 'HOME_WIN'"
+            (click)="$event.preventDefault()"
+            [ngClass]="{
+               'checkbox-verde': item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+            }">
+          {{ getTeamNameByMatchs( item.matchId , "LOCAL") != null ? getTeamNameByMatchs( item.matchId , "LOCAL")!.name.substring(0, 3).toUpperCase() : 'Desconocido' }}
+        </label>
+        <label class="prediction-item">
+          <input type="checkbox" [checked]="item.result === 'DRAW'"
+            (click)="$event.preventDefault()"
+            [ngClass]="{
+               'checkbox-verde': item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+            }">
+          Empate
+        </label>
+        <label class="prediction-item">
+          {{ getTeamNameByMatchs( item.matchId , "AWAY") != null ? getTeamNameByMatchs( item.matchId , "AWAY")!.name.substring(0, 3).toUpperCase() : 'Desconocido' }}
+          <img *ngIf="getTeamNameByMatchs(item.matchId, 'AWAY')?.logo" [src]="getTeamNameByMatchs(item.matchId, 'AWAY')?.logo" width="16" height="16">
+          <input type="checkbox" [checked]="item.result === 'AWAY_WIN'"
+            (click)="$event.preventDefault()"
+            [ngClass]="{
+               'checkbox-verde': item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+            }">
+        </label>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+<ng-template #noMatches>
+  <p class="text-muted mt-4">No hay tickets registrados</p>
+</ng-template>

@@ -1,0 +1,63 @@
+<h1>Equipos</h1>
+
+<div *ngIf="teams.length > 0; else noTeams" class="mt-4">
+  <div class="only-desktop table-scroll">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Nombre corto</th>
+          <th>Logo</th>
+          <th>Liga</th>
+          <th>Estadio</th>
+          <th>Habilitado</th>
+          <th *ngIf="isAdmin()">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of teams">
+          <td>{{ team.name }}</td>
+          <td>{{ team.shortName }}</td>
+          <td><img [src]="team.logo" alt="Logo" style="width:32px; height:32px; object-fit:contain;" /></td>
+          <td>{{ team.league }}</td>
+          <td>{{ team.stadium }}</td>
+          <td>
+            <span class="tag" [ngClass]="team.enabled ? 'tag-accent' : 'tag-outline'">
+              {{ team.enabled ? 'Sí' : 'No' }}
+            </span>
+          </td>
+          <td *ngIf="isAdmin()">
+            <button class="btn btn-secondary btn-sm" (click)="editTeam(team.teamId)">Editar</button>
+            <button class="btn btn-secondary btn-sm" (click)="deleteTeam(team.teamId)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="only-mobile flex-col gap-3">
+    <div class="card elev-sm" *ngFor="let team of teams">
+      <div class="flex-between">
+        <strong>{{ team.name }}</strong>
+        <span class="tag" [ngClass]="team.enabled ? 'tag-accent' : 'tag-outline'">
+          {{ team.enabled ? 'Activo' : 'Inactivo' }}
+        </span>
+      </div>
+      <div class="flex gap-3 mt-2" style="align-items:center;">
+        <img [src]="team.logo" alt="Logo" style="width:48px; height:48px; object-fit:contain;" />
+        <div>
+          <p class="card-body" style="margin:0;">{{ team.shortName }} · {{ team.league }}</p>
+          <p class="text-muted" style="margin:2px 0 0; font-size:13px;">{{ team.stadium }}</p>
+        </div>
+      </div>
+      <div class="flex gap-2 mt-3" style="justify-content:center;" *ngIf="isAdmin()">
+        <button class="btn btn-secondary btn-sm" (click)="editTeam(team.teamId)">Editar</button>
+        <button class="btn btn-secondary btn-sm" (click)="deleteTeam(team.teamId)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noTeams>
+  <p class="text-muted mt-4">No hay equipos registrados</p>
+</ng-template>

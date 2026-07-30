@@ -1,4 +1,5 @@
 import express, { Application } from "express";
+import path from "path";
 
 import auth  from "../routes/auth";
 import categories  from "../routes/categories";
@@ -69,6 +70,11 @@ class Server{
         this.app.use( this.apiPaths.matchs, matchs );
         this.app.use( this.apiPaths.tournament, tournament );
         this.app.use( this.apiPaths.tickets, tickets );
+
+        // Fallback SPA: cualquier ruta que no sea /api/* devuelve el index.html de Angular
+        this.app.get( '/*splat', ( _req, res ) => {
+            res.sendFile( path.join( process.cwd(), 'public', 'index.html' ) );
+        });
     }
 
     listen(){

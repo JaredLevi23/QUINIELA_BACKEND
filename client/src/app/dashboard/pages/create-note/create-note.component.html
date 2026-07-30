@@ -1,0 +1,33 @@
+<h1>Crear torneo</h1>
+
+<form [formGroup]="tournamentForm" (ngSubmit)="onSubmitTournament()" class="mt-4" style="max-width:420px;">
+  <div class="field mt-3">
+    <label for="name">Nombre del torneo</label>
+    <input id="name" type="text" class="input" formControlName="name" placeholder="Ej: Torneo Apertura">
+    <div class="field-error" *ngIf="tournamentForm.get('name')?.invalid && tournamentForm.get('name')?.touched">
+      El nombre es requerido
+    </div>
+  </div>
+
+  <div class="flex gap-3 mt-3 flex-wrap">
+    <div class="field" style="flex:1; min-width:160px;">
+      <label for="startDate">Fecha de inicio</label>
+      <input id="startDate" type="date" class="input" formControlName="startDate">
+    </div>
+
+    <div class="field" style="flex:1; min-width:160px;">
+      <label for="endDate">Fecha de fin</label>
+      <input id="endDate" type="date" class="input" formControlName="endDate">
+    </div>
+  </div>
+
+  <div class="field mt-3">
+    <label for="tournamentFile">Cargar torneo desde archivo (opcional)</label>
+    <input id="tournamentFile" type="file" class="input" accept=".xlsx,.xls" #fileInput (change)="onFileSelected($event)">
+    <p class="text-muted" style="font-size:12px; margin-top:4px;">
+      Si adjuntas un archivo, el torneo se creará a partir de él en lugar del alta manual.
+    </p>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-4" [disabled]="!tournamentForm.valid">Crear torneo</button>
+</form>

@@ -1,0 +1,14 @@
+<div class="nav">
+  <a routerLink="/dashboard/notes-list" class="nav-brand">Quiniela <span style="color:var(--color-accent)">Amigos</span></a>
+
+  <div class="nav-links">
+    <a routerLink="/dashboard/notes-list" routerLinkActive="active">Torneos</a>
+    <a *ngIf="isAdmin()" routerLink="/dashboard/create-match" routerLinkActive="active">Encuentros</a>
+    <a routerLink="/dashboard/team-list" routerLinkActive="active">Equipos</a>
+    <a *ngIf="isAdmin()" routerLink="/dashboard/users-list" routerLinkActive="active">Usuarios</a>
+  </div>
+
+  <div class="nav-user">
+    <button class="btn btn-secondary" (click)="logout()">Cerrar sesión</button>
+  </div>
+</div>

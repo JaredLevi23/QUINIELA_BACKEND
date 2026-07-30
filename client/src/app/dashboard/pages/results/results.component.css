@@ -1,0 +1,56 @@
+.matches-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.match-card {
+  width: 260px;
+}
+
+@media (max-width: 575px) {
+  .matches-container {
+    justify-content: center;
+  }
+  .match-card {
+    width: 90%;
+  }
+  .prediction-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .match-card { width: calc(50% - 14px); }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .match-card { width: calc(33.333% - 14px); }
+}
+
+.prediction-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  align-items: center;
+}
+
+.prediction-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.prediction-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+
+.prediction-item input[type="checkbox"].checkbox-verde {
+  accent-color: var(--color-accent);
+}
+
+.prediction-item input[type="checkbox"].checkbox-rojo {
+  accent-color: var(--color-neutral-600);
+}
