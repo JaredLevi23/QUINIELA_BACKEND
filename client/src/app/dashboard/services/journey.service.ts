@@ -13,14 +13,17 @@ export class JourneyService {
 
   private readonly baseUrl: string = environments.baseUrl;
   tournaments = signal<Tournament[]>([]);
+  loading = signal<boolean>(true);
 
   constructor(private http: HttpClient) {
     this.loadJourneys().subscribe({
       next: tournaments => {
         this.setTournaments(tournaments);
+        this.loading.set(false);
         console.log('Torneos cargados al iniciar JourneyService:', this.tournaments());
       },
       error: err => {
+        this.loading.set(false);
         console.error('Error al cargar los torneos al iniciar JourneyService:', err);
       }
     });

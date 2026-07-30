@@ -1,4 +1,7 @@
-<h1>Equipos</h1>
+<div class="flex-between flex-wrap gap-3">
+  <h1>Equipos</h1>
+  <a *ngIf="isAdmin()" routerLink="/dashboard/create-team" class="btn btn-primary">Crear equipo</a>
+</div>
 
 <div *ngIf="teams.length > 0; else noTeams" class="mt-4">
   <div class="only-desktop table-scroll">

@@ -18,6 +18,7 @@ export class NotesListComponent{
   isAdmin = computed(() => this.authService.currentUser()?.role === 'admin');
 
  tournaments = computed(() => this.journeyService.tournaments());
+ isLoading = computed(() => this.journeyService.loading());
 
   constructor( private journeyService: JourneyService, private router: Router ) {}
 

@@ -12,26 +12,32 @@
   <shared-search-box placeholder="Buscar torneo" (onValue)="searchTournament($event)"></shared-search-box>
 </div>
 
-<div *ngIf="tournaments().length > 0; else loading" class="flex-col gap-3 mt-4">
-  <div *ngFor="let tournament of tournaments()"
-       class="card elev-sm flex-between flex-wrap gap-3"
-       style="flex-direction:row; padding:24px; cursor:pointer;"
-       (click)="gotoResults(tournament.tournamentId)">
-    <div style="flex:1; min-width:220px;">
-      <h2 style="margin:0;">{{ tournament.name }}</h2>
-      <p class="card-body" style="margin-top:4px;">
-        {{ tournament.startDate | date: 'dd/MM/yyyy' }} — {{ tournament.endDate | date: 'dd/MM/yyyy' }}
-      </p>
-    </div>
-    <div class="flex gap-2 flex-wrap" (click)="$event.stopPropagation()">
-      <ng-container *ngIf="isAdmin()">
-        <button class="btn btn-secondary" (click)="editTournament(tournament.tournamentId)">Editar</button>
-        <button class="btn btn-secondary" (click)="deleteTournament(tournament.tournamentId)">Eliminar</button>
-      </ng-container>
-      <button class="btn btn-primary" (click)="gotoResults(tournament.tournamentId)">Ver pronósticos</button>
+<ng-container *ngIf="!isLoading(); else loading">
+  <div *ngIf="tournaments().length > 0; else empty" class="flex-col gap-3 mt-4">
+    <div *ngFor="let tournament of tournaments()"
+         class="card elev-sm flex-between flex-wrap gap-3"
+         style="flex-direction:row; padding:24px; cursor:pointer;"
+         (click)="gotoResults(tournament.tournamentId)">
+      <div style="flex:1; min-width:220px;">
+        <h2 style="margin:0;">{{ tournament.name }}</h2>
+        <p class="card-body" style="margin-top:4px;">
+          {{ tournament.startDate | date: 'dd/MM/yyyy' }} — {{ tournament.endDate | date: 'dd/MM/yyyy' }}
+        </p>
+      </div>
+      <div class="flex gap-2 flex-wrap" (click)="$event.stopPropagation()">
+        <ng-container *ngIf="isAdmin()">
+          <button class="btn btn-secondary" (click)="editTournament(tournament.tournamentId)">Editar</button>
+          <button class="btn btn-secondary" (click)="deleteTournament(tournament.tournamentId)">Eliminar</button>
+        </ng-container>
+        <button class="btn btn-primary" (click)="gotoResults(tournament.tournamentId)">Ver pronósticos</button>
+      </div>
     </div>
   </div>
-</div>
+
+  <ng-template #empty>
+    <p class="text-muted mt-4">No hay torneos disponibles todavía.</p>
+  </ng-template>
+</ng-container>
 
 <ng-template #loading>
   <p class="text-muted mt-4">Cargando torneos...</p>
