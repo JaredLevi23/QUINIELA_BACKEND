@@ -31,6 +31,21 @@ export class AuthService {
         }
     }
 
+    register( name: string, lastname: string, email: string, password: string ): Observable<boolean> {
+        const url = `${this.baseUrl}/api/users`;
+        const body = { name, lastname, email, password };
+
+        return this.http.post(url, body)
+        .pipe(
+            map( () => true ),
+            catchError( err => {
+                console.log('Register failed: ' + err );
+                return throwError( ()=> err.error.msg );
+            })
+        );
+    }
+
+
     login( email: string, password: string ): Observable<boolean> {
         const url = `${this.baseUrl}/api/auth`;
         const body = { email, password };

@@ -13,6 +13,14 @@
     </div>
 
     <div class="field mt-3">
+      <label for="lastname">Apellido</label>
+      <input id="lastname" type="text" formControlName="lastname" placeholder="Tu apellido" class="input">
+      <div class="field-error" *ngIf="registerForm.get('lastname')?.invalid && registerForm.get('lastname')?.touched">
+        El apellido es requerido
+      </div>
+    </div>
+
+    <div class="field mt-3">
       <label for="email">Correo electrónico</label>
       <input id="email" type="email" formControlName="email" placeholder="tucorreo@ejemplo.com" class="input">
       <div class="field-error" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
