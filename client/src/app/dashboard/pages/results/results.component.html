@@ -23,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let ticket of tickets()">
+        <tr *ngFor="let ticket of sortedTickets()">
           <td>{{ ticket.nickName || 'Desconocido' }}</td>
           <td class="text-muted">{{ getNumberOfPredictions(ticket) }}</td>
           <td>
@@ -50,8 +50,8 @@
           <input type="checkbox" [checked]="item.result === 'HOME_WIN'"
             (click)="$event.preventDefault()"
             [ngClass]="{
-               'checkbox-verde': item.result === getMatchResult(item.matchId),
-               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+               'checkbox-verde': hasMatchStarted(item.matchId) && item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': hasMatchStarted(item.matchId) && item.result !== getMatchResult(item.matchId)
             }">
           {{ getTeamNameByMatchs( item.matchId , "LOCAL") != null ? getTeamNameByMatchs( item.matchId , "LOCAL")!.name.substring(0, 3).toUpperCase() : 'Desconocido' }}
         </label>
@@ -59,8 +59,8 @@
           <input type="checkbox" [checked]="item.result === 'DRAW'"
             (click)="$event.preventDefault()"
             [ngClass]="{
-               'checkbox-verde': item.result === getMatchResult(item.matchId),
-               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+               'checkbox-verde': hasMatchStarted(item.matchId) && item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': hasMatchStarted(item.matchId) && item.result !== getMatchResult(item.matchId)
             }">
           Empate
         </label>
@@ -70,8 +70,8 @@
           <input type="checkbox" [checked]="item.result === 'AWAY_WIN'"
             (click)="$event.preventDefault()"
             [ngClass]="{
-               'checkbox-verde': item.result === getMatchResult(item.matchId),
-               'checkbox-rojo': item.result !== getMatchResult(item.matchId)
+               'checkbox-verde': hasMatchStarted(item.matchId) && item.result === getMatchResult(item.matchId),
+               'checkbox-rojo': hasMatchStarted(item.matchId) && item.result !== getMatchResult(item.matchId)
             }">
         </label>
       </div>

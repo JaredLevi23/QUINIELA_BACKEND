@@ -52,11 +52,18 @@ export class ResultsComponent {
   isPredictionCorrect(prediction: Prediction): boolean {
     const match = this.matchs().find(m => m.matchId === prediction.matchId);
     if (!match) return false;
+    if (!this.hasMatchStarted(prediction.matchId)) return false;
     // Lógica: compara prediction.result con el resultado real
     if (prediction.result === 'HOME_WIN' && match.homeScore > match.awayScore) return true;
     if (prediction.result === 'AWAY_WIN' && match.homeScore < match.awayScore) return true;
     if (prediction.result === 'DRAW' && match.homeScore === match.awayScore) return true;
     return false;
+  }
+
+  hasMatchStarted(matchId: string): boolean {
+    const match = this.matchs().find(m => m.matchId === matchId);
+    if (!match) return false;
+    return new Date(match.matchDate) <= new Date();
   }
 
   getPredictionForTournament(tournamentId: string){
